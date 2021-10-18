@@ -1,0 +1,5 @@
+kubectl run [pod name]my-first-pod --image [imagename:Tag] nginx:alpine
+kubectl get pods|po -o wide
+kubectl get po my-first-demo
+kubectl describe pod my-first-pod 
+kubectl delete pod my-first-pod
