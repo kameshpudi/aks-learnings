@@ -1,5 +1,18 @@
 kubectl run [pod name]my-first-pod --image [imagename:Tag] nginx:alpine
+
+kubectl expose pod my-first-pod  --type=LoadBalancer --port=80 --name=my-first-service
+
+
 kubectl get pods|po -o wide
 kubectl get po my-first-demo
 kubectl describe pod my-first-pod 
 kubectl delete pod my-first-pod
+
+
+kubectl logs -f my-first-pod
+
+Connect ot container
+kubectl exec -it my-first-pod -- /bin/bash
+
+Get yaml o/p
+kubectl get pod my-first-pod -o yaml
